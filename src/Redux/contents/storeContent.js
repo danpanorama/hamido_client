@@ -1,0 +1,12 @@
+export const ADD_STORE_ITEMS = "ADD_STORE_ITEMS";
+
+export const REMOVE_STORE_ITEMS = "REMOVE_STORE_ITEMS";
+
+export const SET_STORE_ITEMS = "SET_STORE_ITEMS";
+
+export const SET_SINGLE_STORE_ITEMS = "SET_SINGLE_STORE_ITEMS";
+
+export const CLEAR = "CLEAR";
+
+
+
