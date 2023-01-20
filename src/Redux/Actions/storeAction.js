@@ -22,7 +22,7 @@ import {  SET_STORE_ITEMS } from '../contents/storeContent';
           } else {
             dispatch({
               type: SET_STORE_ITEMS,
-              data:res.data.allItems
+              data:res.data
             });
             dispatch({
               type: MSG,

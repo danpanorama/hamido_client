@@ -27,6 +27,12 @@ function StoreComp() {
         <div className="div">{e.name}</div>
     )
  })}
+
+{items.store_nav.map((e)=>{
+    return(
+        <div className="div">{e.seractive}</div>
+    )
+ })}
     </div>
   );
 }

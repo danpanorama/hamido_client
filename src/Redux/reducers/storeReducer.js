@@ -2,6 +2,7 @@ import * as actionTypes from "../contents/storeContent";
 
 const initialState = {
   store_list: [],
+  store_nav:[]
 
 };
 
@@ -16,6 +17,7 @@ const store = (state = initialState, action) => {
 
      if(action.data){
       store_items.store_list = action.data.allItems
+      store_items.store_nav = action.data.servingWaysList
      }else{
         store_items.store_list = []
 
