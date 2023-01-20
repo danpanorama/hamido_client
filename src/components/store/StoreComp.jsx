@@ -24,7 +24,7 @@ function StoreComp() {
         
  {items.store_list.map((e)=>{
     return(
-        <div className="div">{e.name}</div>
+        <div className="div">{e.pname}</div>
     )
  })}
     </div>
