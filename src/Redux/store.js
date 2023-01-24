@@ -4,13 +4,15 @@ import {composeWithDevTools} from 'redux-devtools-extension'
 import ErrorReducer from './reducers/errReducer'
 import storeReducer from './reducers/storeReducer'
 import usersReducer from './reducers/usersReducer'
+import cartReducer from './reducers/cartReducer'
 
 
 
 const reducer = combineReducers({
     err:ErrorReducer,
     users:usersReducer,
-    store:storeReducer
+    store:storeReducer,
+    cart:cartReducer
  
    
 })

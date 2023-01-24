@@ -1,0 +1,54 @@
+.card{
+    padding: 5px;
+    border-bottom: 1px solid rgb(173, 173, 173);
+}
+.padd{
+    padding: 10px;
+}
+.positionSticky{
+    position: fixed;
+z-index: 888888;
+    background-color: royalblue;
+    color: white;
+    width: 100%;
+
+}
+.storeNav{
+     
+}
+.alink:active{
+width: 130%;
+}
+
+.bcred{
+  background-color: red;
+}
+.bcblu{
+  background-color: rgba(183, 211, 236, 0.714);
+  
+
+
+}
+.bcblue{
+  background-color: royalblue;
+  border: 2px solid white !important;
+ 
+}
+.border-left{
+    border-left: 1px solid white;
+    
+  }
+  .grid-row-nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    overflow-x: scroll;
+  }
+
+  .img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+
+    background-size: cover;
+  }

@@ -6,6 +6,7 @@ import Nav from "./Nav";
 import { useDispatch, useSelector } from "react-redux";
 import Home from "../pages/Home";
 import Store from "../pages/Store";
+import CreateUser from "../pages/CreateUser";
 
 
 
@@ -21,6 +22,7 @@ function NavRoute() {
 <Route path="/" element={<Home/>} exact/>
 
 <Route path="/store" element={<Store/>} exact/>
+<Route path="/register" element={<CreateUser/>} exact/>
 
 
 {/* <Route path="/productlist" element={ <PrivateRoute />} exact> 

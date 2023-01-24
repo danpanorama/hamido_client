@@ -1,0 +1,80 @@
+.dropdown{
+    
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    /* transition: all .5s ease; */
+    overflow: hidden;
+   border-bottom-left-radius: 20px;
+   border-bottom-right-radius: 20px;
+   border-top-left-radius: 25px;
+   border-top-right-radius: 25px;
+padding-bottom: 20px;
+margin-top: 10px;
+    transition: all .5s ease;
+height:350px;
+margin-bottom: 10px;
+}
+
+.closeDropDown{
+    height: 0;
+    width: 100%;
+    background-color: aliceblue;
+    /* transition: all .5s ease; */
+   visibility: hidden;
+   opacity: 0;
+   transition: opacity .1s , height .5s 0s;
+
+
+}
+.salads{
+    margin-bottom: 12px;
+    text-align: right;
+  border-radius: 20px;
+    width: 95%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    transition: all .5s ease;
+}
+.posrel{
+    position: relative;
+    
+}
+.active{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: 1px solid royalblue;
+    margin-left: 40px;
+    margin-right: 20px;
+    transition: all .5s ease;
+
+}
+
+.addToCart{
+  text-align: center;
+    width: 50%;
+    min-height: 50px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: royalblue;
+    color: white;
+    padding: 0px 20px 0px 20px;
+}
+
+.addToCartWithDifferent{
+    padding: 0px 20px 0px 20px;
+    width: 50%;
+    min-height: 50px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: rgb(221, 221, 221);
+    color: rgb(0, 0, 0);
+    font-size: .8rem;
+}
+.overflowhidden{
+    overflow: hidden;
+}

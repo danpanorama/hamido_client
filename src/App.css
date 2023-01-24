@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+
+*{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+body{
+  overflow-x: hidden;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.posfix{
+  position: sticky;
+  bottom: 0;
+  left: 0;
+}
+.flexrow{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+}
+.center{
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.drtl{
+  direction: rtl;
+}
+.bet{
+justify-content: space-between;
+align-items: center;
+}
+.h2{
+
+ color: royalblue;
+  
+ 
+
+}
+.cb{
+  color: royalblue;
+}
+.addToCart2{
+   position: fixed;
+   bottom: 0;
+   left: 0;
+  width: 100%;
+  min-height: 50px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: yellowgreen;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.image{
+  height: 80px;
+  width: 120px;
+}
+.w100{
+  width: 100%;
+}
+.alignCenter{
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flexcol{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+.max-width500{
+  max-width: 500px;
+}
+
+.grid-form{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 10px;
+}
+.header{
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+  position: sticky;
+  top: 10%;
+  left: 0;
+  background-color: white;
+}
+
+.cw{
+  color: white;
+}
+.link{
+  text-decoration: none;
+}
+.tac{
+  text-align: center;
 }

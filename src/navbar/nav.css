@@ -1,0 +1,36 @@
+.activeNav{
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 70%;
+    background-color: royalblue;
+    box-shadow: 2px 3px 20px rgb(164, 164, 164);
+    z-index: 999999999999999999;
+    transition: all .2s ease;
+
+}
+.zz{  z-index: 999999999999999999;}
+.closeNav{
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 0;
+    background-color: royalblue;
+    box-shadow: 2px 3px 20px rgb(164, 164, 164);
+    z-index: 999999999999999999; 
+    visibility: hidden;
+display: none;
+    transition: all .2s ease;
+   transition: display 2s ;
+}
+.posSticky{
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.bcwhite{
+    background-color: white;
+}
