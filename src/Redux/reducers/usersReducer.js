@@ -14,11 +14,11 @@ const users = (state = initialState, action) => {
       const login = {
         ...state,
       };
-     if(action.data){
+     if(action.data && !action.data.msg){
       let userInfo = JSON.stringify(action.data);
       localStorage.setItem('user',userInfo)
       login.is_Log = true
-      login.users_info = action.data
+      login.users_info = action.data.userInfo
      }else{
         login.users_info = []
 
@@ -50,7 +50,7 @@ const users = (state = initialState, action) => {
       if(userInfo == undefined || userInfo == 'undefined' ){
         return stateStill
       }else{
-        stateStill.users_info = userInfo
+        stateStill.users_info = userInfo.userInfo
         stateStill.is_Log = true
       }}else{
         console.log('user is undefined')

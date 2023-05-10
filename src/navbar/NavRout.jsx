@@ -1,43 +1,44 @@
 import { Routes, Route } from "react-router-dom";
 import Nav from "./Nav";
-
-// import PrivateRoute from "../routes/PrivateRout";
-// import AdminHardPermissions from "../routes/AdminHardPermissions";
 import { useDispatch, useSelector } from "react-redux";
 import Home from "../pages/Home";
 import Store from "../pages/Store";
 import CreateUser from "../pages/CreateUser";
+import PrivateRoute from "../privateRouter/PrivateRouter";
+import PrivateRouterlogin from "../privateRouter/PrivateRouterlogin";
 
+import LoginPage from "../pages/LoginPage";
 
-
-function NavRoute() {
+function NavRoute(props) {
   const dispatch = useDispatch();
 
   return (
     <div className=" ">
-      <Nav/>
-      
-<div className="">
-<Routes>
-<Route path="/" element={<Home/>} exact/>
+      <Nav logout={props.logout} />
 
-<Route path="/store" element={<Store/>} exact/>
-<Route path="/register" element={<CreateUser/>} exact/>
+      <div className="">
+        <Routes>
+          <Route path="/" element={<Home />} exact />
+
+          <Route path="/store" element={<PrivateRoute />} exact>
+            <Route path="/store" element={<Store />} exact />
+          </Route>
+
+          <Route path="/register" element={<CreateUser />} exact />
+
+          <Route path="/login" element={<PrivateRouterlogin />} exact>
+          <Route path="/login" element={<LoginPage />} exact />
+          </Route>
 
 
-{/* <Route path="/productlist" element={ <PrivateRoute />} exact> 
-<Route path="/productlist" element={<ProductStore/>} exact/>
-</Route> */}
-{/* 
-<Route path="/usersscreen" element={ <AdminHardPermissions />} exact> 
-<Route path="/usersscreen" element={<UsersScreen/>} exact/>
-</Route> */}
 
-</Routes>
-</div>
-   
-    </div>
   
+         
+         
+          
+        </Routes>
+      </div>
+    </div>
   );
 }
 

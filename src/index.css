@@ -15,3 +15,17 @@ code {
 .margin_left{
   margin-left: 20px;
 }
+
+.bcgreen{
+  background-color: green;
+}
+.close{
+  opacity: 0;
+  height: 0;
+  visibility: hidden;
+}
+.open{
+  display: block;
+  height: auto;
+  opacity: 1;
+}

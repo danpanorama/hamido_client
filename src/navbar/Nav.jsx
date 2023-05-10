@@ -4,9 +4,10 @@ import { useEffect, useState } from "react";
 import './nav.css'
 
 
-function Nav() {
+function Nav(props) {
   const dispatch = useDispatch();
   const [openNavState,setOpenNavState] = useState(false);
+  const user = useSelector((state) => state.users);
 
 
   function openNave(){
@@ -28,10 +29,14 @@ function Nav() {
       <div onClick={openNave} className="buttonOpenNav">
         close 
       </div>
+      {user.users_info.username ? user.users_info.username : ''}
+      {user.users_info.userid ? user.users_info.userid : ''}
           <NavLink to='/store'>store</NavLink>
           <NavLink to='/register'>create</NavLink>
           <NavLink to='/store'>store</NavLink>
           <NavLink to='/store'>store</NavLink>
+          
+          {user.is_Log ?    <button onClick={props.logout}>logout</button> : ''}
         </div>
      </div>
       </div>

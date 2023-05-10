@@ -5,6 +5,7 @@ import ErrorReducer from './reducers/errReducer'
 import storeReducer from './reducers/storeReducer'
 import usersReducer from './reducers/usersReducer'
 import cartReducer from './reducers/cartReducer'
+import orderReducer from './reducers/orderReducer'
 
 
 
@@ -12,7 +13,8 @@ const reducer = combineReducers({
     err:ErrorReducer,
     users:usersReducer,
     store:storeReducer,
-    cart:cartReducer
+    cart:cartReducer,
+    order:orderReducer
  
    
 })

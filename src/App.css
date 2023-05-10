@@ -50,10 +50,19 @@ align-items: center;
    left: 0;
   width: 100%;
   min-height: 50px;
+  height: 50px;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   background-color: yellowgreen;
   color: white;
+  transition: all .4s ease;
+
+}
+.windowOpen{
+  height: 80% ;
+  transition: all .4s ease;
+  overflow-y: scroll;
+  color: black;
 }
 .image{
   height: 80px;
@@ -101,4 +110,17 @@ align-items: center;
 }
 .tac{
   text-align: center;
+}
+
+.opacity0
+{
+  opacity: 0;
+  visibility: hidden;
+}
+.bcyellow{
+  background-color: yellow;
+}
+.bcpurple{
+  background-color: purple;
+
 }

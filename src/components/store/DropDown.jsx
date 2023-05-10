@@ -74,6 +74,7 @@ if(flagIndexState <= 0){
           : "closeDropDown flexcol center"
       }
     >
+     
       <br />
 
       <SaladsList
@@ -96,7 +97,6 @@ if(flagIndexState <= 0){
             {props.isInCart.bool ? 
             (
        <div className="flexrow">
-        <button onClick={selectFromCartBack}  id={flagIndexState -1} >{flagIndexState >= 0 ? 0 : flagIndexState -1 }</button>
                <div
               className="Button "
               onClick={() => {
@@ -106,12 +106,13 @@ if(flagIndexState <= 0){
             >
                 <div className="amount">
                     <p className="p">
-                      הוסף להזמנה עם תוספות שונות {flagIndexState + 2}{" "}
+                     הוסף להזמנה עם תוספות שונות 
                     </p>
+                   
                   </div>
-                  {props.item.servingway} {props.item.productname}
+                 {props.item.servingway} {props.item.productname}  {flagIndexState +1}X  
             </div>
-            <button  id={flagIndexState }>{flagIndexState +2 }</button>
+       
        </div>
             ) : 
             <div

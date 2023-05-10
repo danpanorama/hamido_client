@@ -4,7 +4,6 @@ import {
   } from '../contents/errContent'
 
 import axiosConfig from "../../config/AxiosConfig";
-import { ADD_SERVWAY, REMOVE_SERVWAY, SET_SERVWAY } from '../contents/servwayContent';
 import { CREATE_ACOUNT, LOGIN, LOGOUT } from '../contents/usersContent';
   
 
@@ -12,7 +11,7 @@ import { CREATE_ACOUNT, LOGIN, LOGOUT } from '../contents/usersContent';
   export const LoginAction = (data) => async (dispatch) => {
     try {
       await axiosConfig
-        .post("/users/login")
+        .post("/users/login",data)
         .then((res) => {
           if (res.data.err) {
             return dispatch({
@@ -20,14 +19,18 @@ import { CREATE_ACOUNT, LOGIN, LOGOUT } from '../contents/usersContent';
               data: res.data.err
             })
           } else {
+            if(res.data.msg){
+              dispatch({
+                type: MSG,
+                data: res.data.msg
+              })
+              return
+            }
             dispatch({
               type: LOGIN,
-              data:res.data.user
+              data:res.data
             });
-            dispatch({
-              type: MSG,
-              data: res.data.msg
-            })
+           
           
           }
         })
@@ -66,7 +69,7 @@ import { CREATE_ACOUNT, LOGIN, LOGOUT } from '../contents/usersContent';
   export const createUserAction = (data) => async (dispatch) => {
     try {
       await axiosConfig
-        .post("/users/login",data)
+        .post("/users/createuser",data)
         .then((res) => {
           if (res.data.err) {
             return dispatch({
@@ -75,8 +78,8 @@ import { CREATE_ACOUNT, LOGIN, LOGOUT } from '../contents/usersContent';
             })
           } else {
             dispatch({
-              type: CREATE_ACOUNT,
-              data:data
+              type: LOGIN,
+              data:res.data
             });
             dispatch({
               type: MSG,

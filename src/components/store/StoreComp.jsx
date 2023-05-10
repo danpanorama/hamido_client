@@ -24,45 +24,12 @@ function StoreComp() {
       dispatch(setStoreProductsAction())
     }
 
-//     function addSalads(e){
-//       let name = e.sname;
-//       let id = e.sid;
-//       let flag = false
 
-//   for(let i = 0; i < saladsState.length; i++){
-//     if(saladsState[i].id == id ){
-//    flag = true
-//     }
-
-//   }
-
-//   if(flag){
-//     saladsState.filter((e)=>{
-//       return e.id != id 
-//      })
-
-//      setSaladState(saladsState)
-
-      
-//   }
-//   else{
-//     let obj = [...saladsState,{id:id,name:name}]
-//     setSaladState(obj)
-//   }
-// flag = false
-
-
-//     }
-
-    function addToCart(e,salads){
-      
-e.salads = salads
+    function addToCart(e,salads){  
+      e.salads = salads
       dispatch(addToCartAction(e));
-
-      console.log(e)
-      console.log(salads)
-
     
+
     }
    
  
